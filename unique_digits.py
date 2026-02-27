@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import os
 
 def check_repeated_digits(n, include_leading_zeroes=False):
     """Return list of numbers up to n (not inclusive) with no repeated digits.
@@ -54,6 +55,9 @@ def plot_frequency(n, filename=None):
             j+=1
         frequencies.append(j/(i+1)) # i+1 to ensure 0 counted
     plt.scatter([j for j in range(n+1)], frequencies)
+    plt.xlabel('n')
+    plt.ylabel("Fraction unique-digit in [0,n]")
+    plt.title("Frequency of Unique-Digit Numbers up to n")
     plt.show()
 
 def longest_streaks(numbers):
@@ -67,6 +71,12 @@ def longest_streaks(numbers):
         result.append(str(numbers[val])+'->'+str(numbers[val+1])+': '+
                       str(sorted_vals[val]))
     return result
+
+def save_plot_frequency(n, outpath, filename=None):
+    plot_frequency(n, filename)
+    os.makedirs(os.path.dirname(outpath), exist_ok=True)
+    plt.savefig(outpath, dpi=300, bbox_inches="tight")
+    plt.close()
 
 def main():
     n = int(input())
