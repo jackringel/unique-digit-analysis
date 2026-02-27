@@ -1,6 +1,6 @@
 # Unique Digit Analysis
 Analyzes pattern of numbers with no repeated digits.
-Running the script prompts integer entry and gives a descending list of the largest gaps between numbers with repeated digit up to that integer.
+Running the script prompts integer entry and gives a descending list of the largest gaps between numbers with repeated digits up to that integer.
 
 ## Functions
 
