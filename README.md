@@ -16,8 +16,6 @@ Writes the list of valid numbers to a file to avoid recomputation for large n.
 Plots the running fraction of numbers in [0, n] that have no repeated digits.  
 Can either compute directly or read from a precomputed data file.
 
-longest_streaks takes in a list of numbers and calculates the longest gaps between elements, sorted descending.
-
 ## Visualization: recursive spikes
 The running frequency drops sharply once "per digit," then gradually recovers before dropping again.
 This pattern repeats at larger scales, creating a "recursive spike" structure. For example, every 10, one number repeats, causing a small spike.
