@@ -1,6 +1,6 @@
 # Unique Digit Analysis
 Analyzes pattern of numbers with no repeated digits.
-Running the script prompts integer entry and gives a descending list of the largest gaps between numbers with repeated digit up to that integer.
+Running the script prompts integer entry and gives a descending list of the largest gaps between numbers with repeated digits up to that integer.
 
 ## Functions
 
@@ -16,17 +16,15 @@ Writes the list of valid numbers to a file to avoid recomputation for large n.
 Plots the running fraction of numbers in [0, n] that have no repeated digits.  
 Can either compute directly or read from a precomputed data file.
 
-longest_streaks takes in a list of numbers and calculates the longest gaps between elements, sorted descending.
-
 ## Visualization: recursive spikes
 The running frequency drops sharply once "per digit," then gradually recovers before dropping again.
 This pattern repeats at larger scales, creating a "recursive spike" structure. For example, every 10, one number repeats, causing a small spike.
 Every 100, a sequence of 10 numbers in a row will repeat, causing a sharper drop. This pattern repeats at a larger scale every order of magnitude.
 
-![Frequency plot](figures/frequency_3k.png)
+![Frequency plot](figures/frequency_2k.png)
 
 For k-digit numbers, the approximate fraction with no repeated digits is
-(10*9*8...(10-k+1))/10^k, which explains the scale-dependent drops we observe.
+(10 * 9 * 8...(10-k+1))/10^k, which explains the scale-dependent drops we observe.
 
 ## Data
 
