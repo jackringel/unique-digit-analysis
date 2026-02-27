@@ -24,7 +24,7 @@ Every 100, a sequence of 10 numbers in a row will repeat, causing a sharper drop
 ![Frequency plot](figures/frequency_3k.png)
 
 For k-digit numbers, the approximate fraction with no repeated digits is
-(10*9*8...(10-k+1))/10^k, which explains the scale-dependent drops we observe.
+(10 * 9 * 8...(10-k+1))/10^k, which explains the scale-dependent drops we observe.
 
 ## Data
 
