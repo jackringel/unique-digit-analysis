@@ -38,7 +38,7 @@ def read_data(filename, n):
     file.close()
     return numbers
 
-def plot_frequency(n, filename=None):
+def plot_frequency(n, filename=None, show=True):
     """Plot frequency of nonrepeated digits for each number up to n (inclusive).
     Read from a file if given, else calculate.
     Calculates upfront and draws from 'master list' instead of
@@ -58,7 +58,8 @@ def plot_frequency(n, filename=None):
     plt.xlabel('n')
     plt.ylabel("Fraction unique-digit in [0,n]")
     plt.title("Frequency of Unique-Digit Numbers up to n")
-    plt.show()
+    if show:
+        plt.show()
 
 def longest_streaks(numbers):
     """Sort list of numbers by longest streak between each number."""
@@ -73,7 +74,7 @@ def longest_streaks(numbers):
     return result
 
 def save_plot_frequency(n, outpath, filename=None):
-    plot_frequency(n, filename)
+    plot_frequency(n, filename, show=False)
     os.makedirs(os.path.dirname(outpath), exist_ok=True)
     plt.savefig(outpath, dpi=300, bbox_inches="tight")
     plt.close()
